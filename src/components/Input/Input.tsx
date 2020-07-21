@@ -1,23 +1,5 @@
-import {
-  FormControl,
-  IconButton,
-  InputAdornment,
-  InputLabel,
-} from '@material-ui/core'
-import Input from '@material-ui/core/Input'
-import { makeStyles } from '@material-ui/core/styles'
-import SearchIcon from '@material-ui/icons/Search'
 import * as React from 'react'
 import { ReactElement, useState, memo } from 'react'
-
-const useStyles = makeStyles({
-  root: {
-    height: 65,
-  },
-  label: {
-    marginLeft: 6,
-  },
-})
 
 interface Props {
   onSearch: (phrase: string) => void
@@ -25,7 +7,6 @@ interface Props {
 
 export const ContactInput = memo(
   ({ onSearch }: Props): ReactElement => {
-    const classes = useStyles()
     const [phrase, setPhrase] = useState('')
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -42,27 +23,6 @@ export const ContactInput = memo(
       onSearch(phrase)
     }
 
-    return (
-      <FormControl fullWidth classes={{ root: classes.root }}>
-        <InputLabel className={classes.label} htmlFor="search">
-          Search for a name
-        </InputLabel>
-        <Input
-          onChange={changeHandler}
-          onKeyDown={keyDownHandler}
-          fullWidth
-          id="search"
-          disableUnderline
-          margin="none"
-          startAdornment={
-            <InputAdornment position="start">
-              <IconButton onClick={submitHandler}>
-                <SearchIcon />
-              </IconButton>
-            </InputAdornment>
-          }
-        />
-      </FormControl>
-    )
+    return <input />
   },
 )

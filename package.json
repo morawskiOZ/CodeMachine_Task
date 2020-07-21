@@ -1,7 +1,7 @@
 {
-  "name": "gatsby_typescript_materialui_jest_gitlabci_netlify_boilerplate",
+  "name": "codemachine_task",
   "version": "1.0.0",
-  "description": "Boilerplate for rapid development with gatsby TS and running CD/CI on GitLab with Netlify Hosting",
+  "description": "App to manage user hobbies",
   "main": "index.js",
   "scripts": {
     "build": "gatsby build",
@@ -13,18 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/styles": "^4.10.0",
     "gatsby": "^2.24.2",
-    "gatsby-plugin-material-ui": "^2.1.9",
-    "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-typescript": "^2.4.14",
-    "netlify-lambda": "^1.6.3",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.10.4",
