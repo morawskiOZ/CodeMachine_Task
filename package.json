@@ -15,7 +15,9 @@
   "dependencies": {
     "gatsby": "^2.24.2",
     "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-typescript": "^2.4.14",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

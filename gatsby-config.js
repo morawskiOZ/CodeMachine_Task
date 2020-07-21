@@ -8,6 +8,7 @@ const path = require('path')
 module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
