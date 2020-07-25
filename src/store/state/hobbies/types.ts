@@ -9,7 +9,7 @@ export interface Hobby {
   uuid: string
   level: HobbyLevel
   description: string
-  startingYear: number
+  startingYear: string
 }
 
 // hobbies - array of records where key is corresponding user uuid
@@ -18,12 +18,12 @@ export interface HobbyState {
 }
 
 export enum HobbiesAction {
-  ADD_HOBBY = 'add_hobby',
-  DELETE_HOBBY = 'delete_hobby',
+  ADD_HOBBY = 'ADD_HOBBY',
+  DELETE_HOBBY = 'DELETE_HOBBY',
   FETCH_HOBBIES_SUCCESS = 'FETCH_HOBBIES_SUCCESS',
   FETCH_HOBBIES_FAIL = 'FETCH_HOBBIES_FAIL',
   HOBBIES_FETCH_REQUESTED = 'HOBBIES_FETCH_REQUESTED',
-  DEFAULT = 'default',
+  DEFAULT = 'DEFAULT',
 }
 
 interface AddHobbyAction {

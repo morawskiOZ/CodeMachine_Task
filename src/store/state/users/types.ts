@@ -5,6 +5,7 @@ export interface User {
 
 export interface UserState {
   users: User[]
+  activeUserUuid: string
 }
 
 export enum UserActions {
@@ -12,6 +13,7 @@ export enum UserActions {
   FETCH_USERS_SUCCESS = 'FETCH_USERS_SUCCESS',
   FETCH_USERS_FAIL = 'FETCH_USERS_FAIL',
   USERS_FETCH_REQUESTED = 'USERS_FETCH_REQUESTED',
+  TOGGLE_ACTIVE_USER = 'TOGGLE_ACTIVE_USER',
   DEFAULT = 'DEFAULT',
 }
 
@@ -25,6 +27,11 @@ interface FetchUserSuccessAction {
   payload: User[]
 }
 
+interface ToggleActiveUserAction {
+  type: UserActions.TOGGLE_ACTIVE_USER
+  payload: string
+}
+
 interface DefaultAction {
   type: UserActions.DEFAULT
 }
@@ -33,3 +40,4 @@ export type UserActionTypes =
   | AddUserAction
   | DefaultAction
   | FetchUserSuccessAction
+  | ToggleActiveUserAction
