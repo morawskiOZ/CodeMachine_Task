@@ -15,5 +15,3 @@ static
 .__mocks__
 
 .netlify
-
-wrap-with-provider.js

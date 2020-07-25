@@ -1,4 +1,4 @@
-enum HobbyLevel {
+export enum HobbyLevel {
   LOW = 'Low',
   MEDIUM = 'Medium',
   HIGH = 'High',
@@ -20,6 +20,9 @@ export interface HobbyState {
 export enum HobbiesAction {
   ADD_HOBBY = 'add_hobby',
   DELETE_HOBBY = 'delete_hobby',
+  FETCH_HOBBIES_SUCCESS = 'FETCH_HOBBIES_SUCCESS',
+  FETCH_HOBBIES_FAIL = 'FETCH_HOBBIES_FAIL',
+  HOBBIES_FETCH_REQUESTED = 'HOBBIES_FETCH_REQUESTED',
   DEFAULT = 'default',
 }
 
@@ -39,6 +42,11 @@ interface DeleteHobbyAction {
   }
 }
 
+interface FetchHobbiesSuccessAction {
+  type: HobbiesAction.FETCH_HOBBIES_SUCCESS
+  payload: Record<string, Hobby[]>[]
+}
+
 interface DefaultAction {
   type: HobbiesAction.DEFAULT
 }
@@ -47,3 +55,4 @@ export type HobbyActionTypes =
   | AddHobbyAction
   | DeleteHobbyAction
   | DefaultAction
+  | FetchHobbiesSuccessAction

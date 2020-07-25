@@ -8,7 +8,8 @@
     "start": "gatsby develop",
     "test": "jest",
     "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
-    "lint-fix": "eslint --fix . --ext ts --ext tsx --ext js --ext jsx"
+    "lint-fix": "eslint --fix . --ext ts --ext tsx --ext js --ext jsx",
+    "init-service-worker": "mkdir -p static && npx msw init static/"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,8 @@
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.1.3",
     "uuid": "^8.2.0"
   },
   "devDependencies": {
@@ -50,6 +53,7 @@
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.1.0",
+    "msw": "^0.19.5",
     "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1",
     "typescript": "^3.9.6"
