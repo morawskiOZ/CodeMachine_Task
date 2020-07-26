@@ -40,8 +40,6 @@ export const HobbyForm = (): ReactElement => {
   const submitHandler = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
     if (activeUserUuid && description && level && startingYear) {
-      console.log(activeUserUuid, description, level, startingYear)
-
       dispatch(
         addHobby(
           { description, level, startingYear, uuid: uuidv4() },

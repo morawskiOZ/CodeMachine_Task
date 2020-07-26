@@ -2,6 +2,7 @@ import {
   applyMiddleware,
   combineReducers,
   createStore as reduxCreateStore,
+  Store,
 } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import createSagaMiddleware from 'redux-saga'
@@ -19,7 +20,7 @@ const combinedReducers = () =>
     users,
   })
 
-const createStore = () => {
+const createStore = (): Store => {
   const store = reduxCreateStore(
     combinedReducers(),
     composeWithDevTools(applyMiddleware(sagaMiddleware)),

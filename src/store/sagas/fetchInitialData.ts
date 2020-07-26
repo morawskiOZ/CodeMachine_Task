@@ -20,7 +20,7 @@ function* fetchUser() {
   }
 }
 
-function* usersSaga(): Generator<any, any, undefined> {
+function* usersSaga(): Generator {
   yield takeEvery(SagasActions.FETCH_INITIAL_DATA, fetchUser)
 }
 

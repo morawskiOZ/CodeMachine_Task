@@ -12,7 +12,6 @@ export const HobbyList = (): ReactElement => {
   const hobbiesByUser = useSelector(state =>
     selectHobbiesByUser(state as AppState, activeUserUuid),
   )
-  console.log(hobbiesByUser, 'hobbiesByUser')
 
   if (!hobbiesByUser?.length) return null
 
