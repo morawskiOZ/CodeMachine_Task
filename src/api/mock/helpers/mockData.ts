@@ -5,13 +5,7 @@ export const mockUsers: User[] = [
   { name: 'Piotr', uuid: '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d' },
   { name: 'Kamil', uuid: '9b1de111-3b7d-4bad-9bdd-2b0d7b3dcb6d' },
   { name: 'Mariusz', uuid: '9b1deb4d-3b7d-4bad-9bdd-110d7b3dcb6d' },
-  { name: 'John', uuid: '9b1deb4d-3b7d-4bad-44dd-2b4d7b3dcb6d' },
-  { name: 'John', uuid: '9b1deb4d-3b7d-4bad-44dd-2b3d7b3dcb6d' },
-  { name: 'John', uuid: '9b1deb4d-3b7d-4bad-44dd-2b1d7b3dcb6d' },
-  { name: 'John', uuid: '9b1deb4d-3b7d-4bad-44dd-221d7b3dcb6d' },
-  { name: 'John', uuid: '9b1deb4d-3b7d-4bad-44dd-543d7b3dcb6d' },
-  { name: 'John', uuid: '9b1deb4d-3b7d-4bad-44dd-2aad7b3dcb6d' },
-  { name: 'John', uuid: '9b1deb4d-3b7d-4bad-44dd-2bsd7b3dcb6d' },
+  { name: 'Harry', uuid: '9b1deb4d-3b7d-4bad-44dd-543d7b3dcb6d' },
 ]
 
 export const mockHobbies: Record<string, Hobby[]> = {

@@ -5,7 +5,7 @@ export const selectHobbiesByUser = (
   state: AppState,
   userUuid: string,
 ): Hobby[] => {
-  const hobbies = state.hobbies.hobbies[userUuid]
+  const hobbies = state.hobbies.hobbies?.[userUuid]
 
   return hobbies
 }

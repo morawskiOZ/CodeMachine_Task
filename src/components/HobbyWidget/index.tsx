@@ -7,7 +7,7 @@ import './index.scss'
 
 export const HobbyWidget = (): ReactElement => {
   return (
-    <div className="HobbyWidget">
+    <div className="HobbyWidget" data-testid="hobby-widget">
       <div className="HobbyWidget--column">
         <UserForm />
         <UserList />

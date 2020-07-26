@@ -5,9 +5,7 @@ import {
   HobbyState,
 } from 'src/store/state/hobbies/types'
 
-const initialState: HobbyState = {
-  hobbies: [],
-}
+const initialState: HobbyState = {}
 
 export default (state = initialState, action: HobbyActionTypes): HobbyState => {
   switch (action.type) {

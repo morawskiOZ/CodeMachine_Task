@@ -24,13 +24,16 @@ export const UserForm = (): ReactElement => {
     <form data-testid="form-user" onSubmit={submitHandler} className="UserForm">
       <input
         name="name"
+        data-testid="form-user-input"
         placeholder="Enter user name"
         value={name}
         onChange={changeHandler}
         aria-label="Enter name"
         className="UserForm__Input"
       />
-      <Button onClick={submitHandler}>Add</Button>
+      <Button onClick={submitHandler} data-testid="button-add-user">
+        Add
+      </Button>
     </form>
   )
 }

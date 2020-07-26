@@ -8,7 +8,7 @@ export const UserList = (): ReactElement => {
   const allUsers = useSelector(selectAllUsers)
 
   return (
-    <div className="UserList">
+    <div className="UserList" data-testid="user-list">
       {allUsers.map(user => {
         return <UserRow {...user} key={user.uuid} />
       })}
