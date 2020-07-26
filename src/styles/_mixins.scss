@@ -1,6 +1,6 @@
 @mixin scroll-horizontal-area {
-  height: 35vh;
-  overflow-y: scroll;
+  height: 30vh;
+  overflow-y: auto;
 }
 
 @mixin flex-center {
