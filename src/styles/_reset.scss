@@ -9,11 +9,6 @@ button {
   border: 0;
 }
 
-button:focus {
-  outline: 0;
-  background-color: $secondary-color;
-}
-
 input,
 select {
   background-color: $tertiary-background-color;
@@ -26,7 +21,7 @@ select {
   color: $primary-color;
 }
 
-*:focus {
+*:focus:not(#gatsby-focus-wrapper) {
   outline: 0;
   border: {
     color: $primary-color;

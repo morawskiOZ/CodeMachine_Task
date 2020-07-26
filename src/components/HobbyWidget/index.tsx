@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react'
-import { UserForm } from '../UserList/UserForm'
+import { HobbyList } from '../HobbyList'
 import { HobbyForm } from '../HobbyList/HobbyForm'
 import { UserList } from '../UserList'
-import { HobbyList } from '../HobbyList'
+import { UserForm } from '../UserList/UserForm'
 import './style.scss'
 
 export const HobbyWidget = (): ReactElement => {
