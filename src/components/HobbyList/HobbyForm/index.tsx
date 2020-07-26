@@ -1,4 +1,5 @@
-import React, { ChangeEvent, FormEvent, ReactElement, useReducer } from 'react'
+import * as React from 'react'
+import { ChangeEvent, FormEvent, ReactElement, useReducer } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Button } from 'src/components/Button'
 import { Hobby, HobbyLevel } from 'src/store/state/hobbies/types'

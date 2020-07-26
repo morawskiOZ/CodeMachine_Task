@@ -1,4 +1,5 @@
-import React, { ReactNode, ReactElement } from 'react'
+import * as React from 'react'
+import { ReactElement, ReactNode } from 'react'
 import { Provider } from 'react-redux'
 import { SagasActions } from 'src/store/sagas/types'
 import createStore from './src/store/createStore'

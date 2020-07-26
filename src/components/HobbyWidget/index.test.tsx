@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import * as React from 'react'
 import { mockHobbies, mockUsers } from 'src/api/mock/helpers/mockData'
 import { AppState } from 'src/store/createStore'
 import { HobbyWidget } from '.'

@@ -1,10 +1,11 @@
-import React, { ReactNode, ReactElement } from 'react'
+import * as React from 'react'
+import { ReactElement, ReactNode } from 'react'
 import './style.scss'
 
 interface Props {
   children: ReactNode
   dataTestid?: string
-  onClick?: (any) => void
+  onClick?: (...args: any) => void
 }
 
 export const Button = ({ children, onClick, ...rest }: Props): ReactElement => {

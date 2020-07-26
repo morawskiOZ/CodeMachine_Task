@@ -1,5 +1,6 @@
 import classnames from 'classnames'
-import React, { KeyboardEvent, ReactElement } from 'react'
+import * as React from 'react'
+import { KeyboardEvent, ReactElement } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleActiveUser } from 'src/store/state/users/actions'
 import { User } from 'src/store/state/users/types'

@@ -1,4 +1,5 @@
-import React, { ReactElement } from 'react'
+import * as React from 'react'
+import { ReactElement } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Button } from 'src/components/Button'
 import { deleteHobby } from 'src/store/state/hobbies/actions'

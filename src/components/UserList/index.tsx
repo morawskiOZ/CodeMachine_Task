@@ -1,4 +1,5 @@
-import React, { ReactElement } from 'react'
+import * as React from 'react'
+import { ReactElement } from 'react'
 import { useSelector } from 'react-redux'
 import { selectAllUsers } from 'src/store/state/users/selectors'
 import './style.scss'

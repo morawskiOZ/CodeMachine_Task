@@ -1,4 +1,5 @@
-import React, { ChangeEvent, FormEvent, ReactElement, useState } from 'react'
+import { ChangeEvent, FormEvent, ReactElement, useState } from 'react'
+import * as React from 'react'
 import { useDispatch } from 'react-redux'
 import { Button } from 'src/components/Button'
 import { v4 as uuidv4 } from 'uuid'
