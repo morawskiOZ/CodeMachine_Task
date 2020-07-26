@@ -6,17 +6,31 @@ body {
 }
 
 button {
-  border: 0
+  border: 0;
+}
+
+button:focus {
+  outline: 0;
+  background-color: $secondary-color;
+}
+
+input,
+select {
+  background-color: $tertiary-background-color;
+  border: 0;
+  border-radius: 0;
 }
 
 * {
   font-family: Open-Sans, sans-serif;
+  color: $primary-color;
 }
 
 *:focus {
-  outline: {
+  outline: 0;
+  border: {
     color: $primary-color;
-    width: 2px;
+    width: 1px;
     style: solid;
   }
 }

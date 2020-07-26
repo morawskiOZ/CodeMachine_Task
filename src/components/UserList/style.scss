@@ -1,5 +1,9 @@
-@import 'mixins';
+@import "mixins";
+@import "variables";
 
 .UserList {
   @include scroll-horizontal-area;
+  & div {
+    border-bottom: 1px solid $primary-color;
+  }
 }

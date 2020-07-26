@@ -3,7 +3,7 @@ import { UserForm } from '../UserList/UserForm'
 import { HobbyForm } from '../HobbyList/HobbyForm'
 import { UserList } from '../UserList'
 import { HobbyList } from '../HobbyList'
-import './index.scss'
+import './style.scss'
 
 export const HobbyWidget = (): ReactElement => {
   return (
