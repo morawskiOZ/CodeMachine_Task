@@ -20,7 +20,7 @@ const createStore = (): Store => {
 
 export default createStore
 
-// infering the type doesn't work, probably because of the middleware?
+// inferring the type doesn't work, probably because of the middleware?
 // export type RootState = ReturnType<typeof combinedReducers>
 
 export interface AppState {

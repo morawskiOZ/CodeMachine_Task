@@ -7,7 +7,9 @@ import { HobbyWidget } from '.'
 import { TestWrapper } from '../../test/TestWrapper'
 
 const mockState: AppState = {
-  hobbies: mockHobbies,
+  hobbies: {
+    hobbies: mockHobbies,
+  },
   users: {
     users: mockUsers,
     activeUserUuid: '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d',
