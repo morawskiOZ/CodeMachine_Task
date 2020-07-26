@@ -8,7 +8,23 @@ const path = require('path')
 module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
-    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Open Sans`,
+            variants: [`400`, '500', `700`],
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['src/styles/'],
+      },
+    },
     {
       resolve: 'gatsby-plugin-root-import',
       options: {

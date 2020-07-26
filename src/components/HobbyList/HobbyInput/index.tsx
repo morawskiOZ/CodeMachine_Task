@@ -16,7 +16,7 @@ export const HobbyInput = (): ReactElement => {
   const initialState: Hobby = {
     description: '',
     level: null,
-    startingYear: null,
+    startingYear: '',
     uuid: '',
   } as const
 
@@ -38,7 +38,7 @@ export const HobbyInput = (): ReactElement => {
 
   const submitHandler = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
-    if (activeUserUuid) {
+    if (activeUserUuid && description && level && startingYear) {
       dispatch(
         addHobby(
           { description, level, startingYear, uuid: uuidv4() },
@@ -48,7 +48,9 @@ export const HobbyInput = (): ReactElement => {
     }
   }
 
-  const changeHandler = (e: ChangeEvent<HTMLInputElement>): void => {
+  const changeHandler = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ): void => {
     formDispatch({ field: e.target.name as InputNames, value: e.target.value })
   }
 
@@ -57,14 +59,15 @@ export const HobbyInput = (): ReactElement => {
       <select
         name="level"
         className="HobbyInput__Select"
-        value={level}
         aria-label="Select passion level"
+        onChange={changeHandler}
+        required
       >
         <option value="">Select passion level</option>
-        <option>{HobbyLevel.LOW}</option>
-        <option>{HobbyLevel.MEDIUM}</option>
-        <option>{HobbyLevel.HIGH}</option>
-        <option>{HobbyLevel.VERY_HIGH}</option>
+        <option value={HobbyLevel.LOW}>{HobbyLevel.LOW}</option>
+        <option value={HobbyLevel.MEDIUM}>{HobbyLevel.MEDIUM}</option>
+        <option value={HobbyLevel.HIGH}>{HobbyLevel.HIGH}</option>
+        <option value={HobbyLevel.VERY_HIGH}>{HobbyLevel.VERY_HIGH}</option>
       </select>
       <input
         name="description"
@@ -72,6 +75,7 @@ export const HobbyInput = (): ReactElement => {
         aria-label="hobby description"
         value={description}
         onChange={changeHandler}
+        required
       />
       <input
         name="startingYear"
@@ -79,6 +83,8 @@ export const HobbyInput = (): ReactElement => {
         aria-label="starting year"
         value={startingYear}
         onChange={changeHandler}
+        type="number"
+        required
       />
       <button type="submit">Add</button>
     </form>

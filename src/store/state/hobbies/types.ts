@@ -13,8 +13,10 @@ export interface Hobby {
 }
 
 // hobbies - array of records where key is corresponding user uuid
+export type Hobbies = Record<string, Hobby[]>[]
+
 export interface HobbyState {
-  hobbies: Record<string, Hobby[]>[]
+  hobbies: Hobbies
 }
 
 export enum HobbiesAction {

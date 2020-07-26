@@ -1,0 +1,7 @@
+@mixin default-border {
+  border: {
+    color: $primary-color;
+    width: 1px;
+    style: solid;
+  }
+}

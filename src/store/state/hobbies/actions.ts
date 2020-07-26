@@ -1,6 +1,9 @@
 import { HobbyActionTypes, HobbiesAction, Hobby } from './types'
 
-export function addHobby(newHobby: Hobby, userUuid: string): HobbyActionTypes {
+export const addHobby = (
+  newHobby: Hobby,
+  userUuid: string,
+): HobbyActionTypes => {
   return {
     type: HobbiesAction.ADD_HOBBY,
     payload: {
@@ -10,10 +13,10 @@ export function addHobby(newHobby: Hobby, userUuid: string): HobbyActionTypes {
   }
 }
 
-export function deleteHobby(
+export const deleteHobby = (
   hobbyUuid: string,
   userUuid: string,
-): HobbyActionTypes {
+): HobbyActionTypes => {
   return {
     type: HobbiesAction.DELETE_HOBBY,
     payload: {

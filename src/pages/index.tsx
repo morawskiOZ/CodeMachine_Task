@@ -1,13 +1,10 @@
 import * as React from 'react'
-import { HobbyInput } from 'src/components/HobbyList/HobbyInput'
-import { UserInput } from '../components/UserList/UserInput/index'
+import { HobbyWidget } from 'src/components/HobbyWidget'
 
 const Home = (): React.ReactElement => {
   return (
     <>
-      <UserInput />
-      <HobbyInput />
-      <h1>Hello Gatsby! Test CI</h1>
+      <HobbyWidget />
     </>
   )
 }

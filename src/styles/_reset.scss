@@ -1,0 +1,18 @@
+@import "variables";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: Open-Sans, sans-serif;
+}
+
+*:focus {
+  outline: {
+    color: $primary-color;
+    width: 2px;
+    style: solid;
+  }
+}

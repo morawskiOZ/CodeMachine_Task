@@ -1,0 +1,11 @@
+@import "variables";
+@import "mixins";
+
+.User {
+  padding: 5px;
+  background-color: $tertiary-background-color;
+  &--selected {
+    background-color: $primary-background-color;
+    color: $text-tertiary-color
+  }
+}
