@@ -5,11 +5,7 @@ export const selectHobbiesByUser = (
   state: AppState,
   userUuid: string,
 ): Hobby[] => {
-  const record = state.hobbies.hobbies.find(
-    hobby => Object.keys(hobby)[0] === userUuid,
-  )
+  const hobbies = state.hobbies.hobbies[userUuid]
 
-  if (!record) return null
-
-  return Object.values(record)[0]
+  return hobbies
 }

@@ -12,8 +12,9 @@ export const HobbyList = (): ReactElement => {
   const hobbiesByUser = useSelector(state =>
     selectHobbiesByUser(state as AppState, activeUserUuid),
   )
+  console.log(hobbiesByUser, 'hobbiesByUser')
 
-  if (!hobbiesByUser) return null
+  if (!hobbiesByUser?.length) return null
 
   return (
     <div className="HobbyList">

@@ -1,4 +1,9 @@
-import { HobbiesAction, HobbyActionTypes, HobbyState } from './types'
+import {
+  Hobby,
+  HobbiesAction,
+  HobbyActionTypes,
+  HobbyState,
+} from 'src/store/state/hobbies/types'
 
 const initialState: HobbyState = {
   hobbies: [],
@@ -9,28 +14,23 @@ export default (state = initialState, action: HobbyActionTypes): HobbyState => {
     case HobbiesAction.ADD_HOBBY:
       return {
         ...state,
-        hobbies: state.hobbies.map(userHobby => {
-          const userId = Object.keys(userHobby)[0]
-          if (userId === action.payload.userUuid) {
-            return { [userId]: [...userHobby[userId], action.payload.hobby] }
-          }
-          return userHobby
-        }),
+        hobbies: {
+          ...state.hobbies,
+          [action.payload.userUuid]: [
+            ...state.hobbies[action.payload.userUuid],
+            action.payload.hobby,
+          ],
+        },
       }
     case HobbiesAction.DELETE_HOBBY:
       return {
         ...state,
-        hobbies: state.hobbies.map(userHobby => {
-          const userId = Object.keys(userHobby)[0]
-          if (userId === action.payload.userUuid) {
-            return {
-              [userId]: userHobby[userId].filter(
-                hobby => hobby.uuid !== action.payload.hobbyUuid,
-              ),
-            }
-          }
-          return userHobby
-        }),
+        hobbies: {
+          ...state.hobbies,
+          [action.payload.userUuid]: state.hobbies[
+            action.payload.userUuid
+          ].filter((hobby: Hobby) => hobby.uuid !== action.payload.hobbyUuid),
+        },
       }
     case HobbiesAction.FETCH_HOBBIES_SUCCESS:
       return {
