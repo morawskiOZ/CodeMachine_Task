@@ -37,7 +37,7 @@ Live version: [https://codemachine-task.netlify.app](https://codemachine-task.ne
    $ npm i
 ```
 
-1.
+2.  Start
 
 ```bash
   $ npm start
