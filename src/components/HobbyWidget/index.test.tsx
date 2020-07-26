@@ -48,11 +48,11 @@ describe('HobbyWidget', () => {
     expect(queryByTestId('button-add-user')).toBeVisible()
     expect(queryByTestId('user-list').childElementCount).toBe(4)
 
-    // Add another name with input
+    // add another name with input
     await userEvent.type(queryByTestId('form-user-input'), 'James Bond')
     fireEvent.click(queryByTestId('button-add-user'))
 
-    // Allow react to update the UI and see both old and new users
+    // allow react to update the UI and see both old and new users
     await waitFor(() => queryByText('James Bond'))
     expect(screen.queryByTestId('user-list')).toHaveTextContent('James Bond')
     expect(queryByTestId('user-list').childElementCount).toBe(5)
