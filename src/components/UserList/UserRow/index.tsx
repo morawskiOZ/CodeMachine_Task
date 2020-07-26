@@ -10,7 +10,9 @@ import './style.scss'
 export const UserRow = ({ name, uuid }: User): ReactElement => {
   const dispatch = useDispatch()
   const activeUserUuid = useSelector(selectActiveUserUuid)
+
   const isActive = activeUserUuid === uuid
+
   const clickHandler = () => {
     dispatch(toggleActiveUser(uuid))
   }

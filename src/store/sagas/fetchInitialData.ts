@@ -13,6 +13,7 @@ function* fetchUser() {
       put({ type: UserActions.FETCH_USERS_SUCCESS, payload: users }),
     ])
   } catch (e) {
+    // TODO client side error handling
     yield all([
       put({ type: HobbiesAction.FETCH_HOBBIES_FAIL, message: e.message }),
       put({ type: UserActions.FETCH_USERS_FAIL, message: e.message }),
