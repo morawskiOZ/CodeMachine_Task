@@ -1,0 +1,7 @@
+.UserForm {
+  display: grid;
+  grid-auto-flow: column;
+  &__Input {
+  min-width: 100px;
+  }
+}

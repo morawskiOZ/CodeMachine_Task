@@ -12,12 +12,8 @@ export interface Hobby {
   startingYear: string
 }
 
-// hobbies - array of records where key is corresponding user uuid
-export type Hobbies = Record<string, Hobby[]>[]
-
-export interface HobbyState {
-  hobbies: Hobbies
-}
+// hobbies - records where key is corresponding user uuid
+export type HobbyState = Record<string, Hobby[]>
 
 export enum HobbiesAction {
   ADD_HOBBY = 'ADD_HOBBY',
@@ -46,7 +42,7 @@ interface DeleteHobbyAction {
 
 interface FetchHobbiesSuccessAction {
   type: HobbiesAction.FETCH_HOBBIES_SUCCESS
-  payload: Record<string, Hobby[]>[]
+  payload: Record<string, Hobby[]>
 }
 
 interface DefaultAction {

@@ -1,0 +1,8 @@
+.HobbyWidget {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 4fr;
+  &--column {
+    width: 100%;
+  }
+}

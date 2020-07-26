@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { toggleActiveUser } from 'src/store/state/users/actions'
 import { User } from 'src/store/state/users/types'
 import { selectActiveUserUuid } from '../../../store/state/users/selectors'
-import './index.scss'
+import './style.scss'
 
 export const UserRow = ({ name, uuid }: User): ReactElement => {
   const dispatch = useDispatch()
@@ -25,7 +25,7 @@ export const UserRow = ({ name, uuid }: User): ReactElement => {
       role="button"
       onKeyPress={keyPressHandler}
       tabIndex={0}
-      className={classnames('User', { 'User--selected': isActive })}
+      className={classnames('UserRow', { 'UserRow--selected': isActive })}
     >
       {name}
     </div>

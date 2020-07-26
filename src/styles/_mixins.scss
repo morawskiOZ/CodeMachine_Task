@@ -1,7 +1,4 @@
-@mixin default-border {
-  border: {
-    color: $primary-color;
-    width: 1px;
-    style: solid;
-  }
+@mixin scroll-horizontal-area {
+  height: 35vh;
+  overflow-y: scroll;
 }

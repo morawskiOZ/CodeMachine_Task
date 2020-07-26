@@ -1,0 +1,5 @@
+@import 'mixins';
+
+.HobbyList {
+  @include scroll-horizontal-area;
+}

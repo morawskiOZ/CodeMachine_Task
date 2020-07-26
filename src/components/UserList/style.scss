@@ -1,0 +1,5 @@
+@import 'mixins';
+
+.UserList {
+  @include scroll-horizontal-area;
+}

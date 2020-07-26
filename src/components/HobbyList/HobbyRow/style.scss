@@ -1,0 +1,10 @@
+@import "variables";
+
+.HobbyRow {
+  display: grid;
+  grid-template-columns: 3fr 5fr 3fr 1fr;
+  & div {
+    padding: 4px 8px;
+    border-bottom: 1px solid $secondary-color
+  }
+}

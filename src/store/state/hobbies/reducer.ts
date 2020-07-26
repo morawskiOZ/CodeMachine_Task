@@ -35,7 +35,7 @@ export default (state = initialState, action: HobbyActionTypes): HobbyState => {
     case HobbiesAction.FETCH_HOBBIES_SUCCESS:
       return {
         ...state,
-        hobbies: [...state.hobbies, ...action.payload],
+        hobbies: { ...state.hobbies, ...action.payload },
       }
     default:
       return state

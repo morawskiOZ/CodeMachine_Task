@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 
-.User {
+.UserRow {
   padding: 5px;
   background-color: $tertiary-background-color;
   &--selected {

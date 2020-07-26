@@ -1,14 +1,15 @@
 import React, { ChangeEvent, FormEvent, ReactElement, useReducer } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Button } from 'src/components/Button'
 import { Hobby, HobbyLevel } from 'src/store/state/hobbies/types'
 import { selectActiveUserUuid } from 'src/store/state/users/selectors'
 import { v4 as uuidv4 } from 'uuid'
 import { addHobby } from '../../../store/state/hobbies/actions'
-import './index.scss'
+import './style.scss'
 
 type InputNames = keyof Hobby
 
-export const HobbyInput = (): ReactElement => {
+export const HobbyForm = (): ReactElement => {
   const dispatch = useDispatch()
 
   const activeUserUuid = useSelector(selectActiveUserUuid)
@@ -39,6 +40,8 @@ export const HobbyInput = (): ReactElement => {
   const submitHandler = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
     if (activeUserUuid && description && level && startingYear) {
+      console.log(activeUserUuid, description, level, startingYear)
+
       dispatch(
         addHobby(
           { description, level, startingYear, uuid: uuidv4() },
@@ -55,10 +58,14 @@ export const HobbyInput = (): ReactElement => {
   }
 
   return (
-    <form onSubmit={submitHandler} data-testid="form-user">
+    <form
+      onSubmit={submitHandler}
+      data-testid="form-user"
+      className="HobbyForm"
+    >
       <select
         name="level"
-        className="HobbyInput__Select"
+        className="HobbyForm__Select HobbyForm__Input"
         aria-label="Select passion level"
         onChange={changeHandler}
         required
@@ -71,6 +78,7 @@ export const HobbyInput = (): ReactElement => {
       </select>
       <input
         name="description"
+        className="HobbyForm__Input"
         placeholder="Enter hobby description"
         aria-label="hobby description"
         value={description}
@@ -79,6 +87,7 @@ export const HobbyInput = (): ReactElement => {
       />
       <input
         name="startingYear"
+        className="HobbyForm__Input"
         placeholder="Enter year"
         aria-label="starting year"
         value={startingYear}
@@ -86,7 +95,7 @@ export const HobbyInput = (): ReactElement => {
         type="number"
         required
       />
-      <button type="submit">Add</button>
+      <Button onClick={submitHandler}>Add</Button>
     </form>
   )
 }
